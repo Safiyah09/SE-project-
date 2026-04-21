@@ -24,6 +24,17 @@ document.getElementById("login").addEventListener("submit", function(event) {
     // Redirect after successful validation
     window.location.href = "home.html";
   });
+const signUpButton = document.getElementById('signUp');
+const signInButton = document.getElementById('signIn');
+const container = document.getElementById('container');
+
+signUpButton.addEventListener('click', () => {
+  container.classList.add("right-panel-active");
+});
+
+signInButton.addEventListener('click', () => {
+  container.classList.remove("right-panel-active");
+});
 
 // HOME PAGE - Menu Button Toggle
 const menuBtn = document.getElementById('menuBtn');
@@ -40,17 +51,6 @@ document.addEventListener('click', function(event) {
     if (dropdownMenu && !event.target.closest('.menu-container')) {
         dropdownMenu.classList.remove('show');
     }
-});
-const signUpButton = document.getElementById('signUp');
-const signInButton = document.getElementById('signIn');
-const container = document.getElementById('container');
-
-signUpButton.addEventListener('click', () => {
-  container.classList.add("right-panel-active");
-});
-
-signInButton.addEventListener('click', () => {
-  container.classList.remove("right-panel-active");
 });
 
 // Handle dropdown item clicks
