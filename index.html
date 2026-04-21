@@ -14,10 +14,10 @@
   <div class="form-container sign-up-container">
     <form>
       <h1>Create Account</h1>
-      <input type="text" placeholder="Name" />
-      <input type="email" placeholder="Email" />
-      <input type="password" placeholder="Password" />
-      <button>Sign Up</button>
+      <input type="text" placeholder="Name" id="name1"/>
+      <input type="email" placeholder="Email" id="email1"/>
+      <input type="password" placeholder="Password" id="pwd"/>
+      <button onclick="validate()">Sign Up</button>
     </form>
   </div>
 
@@ -25,9 +25,9 @@
   <div class="form-container sign-in-container">
     <form>
       <h1>Sign in</h1>
-      <input type="email" placeholder="Email" />
-      <input type="password" placeholder="Password" />
-      <button>Sign In</button>
+      <input type="email" placeholder="Email" id="email2" />
+      <input type="password" placeholder="Password" id="pwd2" />
+      <button onclick="valid2()">Sign In</button>
     </form>
   </div>
 
@@ -37,13 +37,13 @@
       
       <div class="overlay-panel overlay-left">
         <h1>Welcome Back!</h1>
-        <p>To keep connected, please login</p>
+        <p>To keep connected with us please login</p>
         <button class="ghost" id="signIn">Sign In</button>
       </div>
 
       <div class="overlay-panel overlay-right">
-        <h1>Hello, User!</h1>
-        <p>Enter your details to sign in</p>
+        <h1>Hello, Friend!</h1>
+        <p>Enter your details and start journey with us</p>
         <button class="ghost" id="signUp">Sign Up</button>
       </div>
 
@@ -51,3 +51,9 @@
   </div>
 
 </div>
+
+
+
+<script src="saf_script.js"></script>
+</body>
+</html>
