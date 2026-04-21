@@ -43,7 +43,7 @@
   height: 100%;
   width: 50%;
   transition: all 0.6s ease-in-out;
-  z-index: 2;   /* 🔥 BELOW overlay */
+  z-index: 2;   /*  BELOW overlay */
 }
 /* Default */
 .sign-in-container {
