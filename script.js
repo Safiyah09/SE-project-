@@ -13,31 +13,66 @@ signInButton.addEventListener('click', () => {
 });
 
 //Validation
-document.getElementById("login").addEventListener("submit", function(event) {
+function validate(){
+    let username= document.getElementById("name1").value
+    let pwd=document.getElementById("pwd").value
+    let email1=document.getElementById("email1").value
 
-    event.preventDefault(); // stop form from submitting
-  
-    let admin = document.getElementById("admin").value;
-    let password = document.getElementById("password").value;
-  
-    // Username: length > 6 and < 10
-    if (admin.length <= 6 || admin.length >= 10) {
-        alert("Username must be more than 6 and less than 10 characters");
-        return;
-    }
-  
-    // Password: start with letter, alphanumeric, >6 characters
-    let passwordPattern = /^[A-Za-z][A-Za-z0-9]{6,}$/;
-  
-    if (!passwordPattern.test(password)) {
-        alert("Password must start with a letter, be alphanumeric, and more than 6 characters");
+    //username should consist atleast 6-10 characters
+
+    if(username.length <6 || username.length >=10)
+    {
+        alert("username should consist atleast 6-10 characters");
+        event.preventDefault();
         return;
     }
 
-  
-    // Redirect after successful validation
-    window.location.href = "home.html";
-  });
+    let emailpattern = /^[a-zA-Z0-9]+@[a-zA-Z]+\.[a-zA-Z]{2,6}$/
+
+    if(!emailpattern.test(email1)){
+        alert("Email must contain @ and .");
+        event.preventDefault();
+        return;
+    }
+
+     let pwdpattern = /^[A-Za-z][A-Za-z0-9!#@%]{6,}$/
+
+    if(!pwdpattern.test(pwd)){
+        alert("password must start with letters,alphanumerics,special characters and should contain atleast 6 characters");
+        event.preventDefault();
+        return;
+    }
+    alert("successfull login");
+    window.location.href="home.html"
+
+}
+//validation for signIn
+function valid2(){
+    let pwds=document.getElementById("pwd2").value
+    let email=document.getElementById("email2").value
+    
+    let emailpattern = /^[a-zA-Z0-9]+@[a-zA-Z]+\.[a-zA-Z]{2,6}$/
+
+    if(!emailpattern.test(email)){
+        alert("Email must contain @ and .");
+        event.preventDefault();
+        return;
+    }
+
+     let pwdpattern = /^[A-Za-z][A-Za-z0-9!#@%]{6,}$/
+
+    if(!pwdpattern.test(pwds)){
+        alert("password must start with letters,alphanumerics,special characters and should contain atleast 6 characters");
+        event.preventDefault();
+        return;
+    }
+    alert("successfull login");
+    window.location.href="home.html"
+
+}
+
+
+
 
 // HOME PAGE - Menu Button Toggle
 const menuBtn = document.getElementById('menuBtn');
