@@ -3,7 +3,7 @@
   box-sizing: border-box;
   font-family: Arial, sans-serif;
 }
-#login-body {
+body {
   background: url('Grocery.png') no-repeat center/cover;
   display: flex;
   justify-content: center;
@@ -32,7 +32,7 @@
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
-   border: 1px solid rgba(255,255,255,0.2);
+  border: 1px solid rgba(255,255,255,0.2);
   box-shadow: 0 8px 32px rgba(0,0,0,0.4);
   overflow: hidden;
 }
@@ -43,7 +43,7 @@
   height: 100%;
   width: 50%;
   transition: all 0.6s ease-in-out;
-  z-index: 2;   /*  BELOW overlay */
+  z-index: 2;   /* 🔥 BELOW overlay */
 }
 /* Default */
 .sign-in-container {
@@ -63,7 +63,7 @@
 .container.right-panel-active .sign-up-container {
   transform: translateX(100%);
   opacity: 1;
-  z-index: 2;   
+  z-index: 2;   /* 🔥 BRING FRONT */
 }
 /* Form styling */
 form {
@@ -118,7 +118,7 @@ button.ghost:hover{
   height: 100%;
   overflow: hidden;
   transition: transform 0.6s ease-in-out;
-  z-index: 3;
+  z-index: 3;   /* ABOVE forms */
 }
 .container.right-panel-active .overlay-container {
   transform: translateX(-100%);
@@ -131,6 +131,7 @@ button.ghost:hover{
   transform: translateX(0);
   transition: transform 0.6s ease-in-out;
   color: #ffffff;
+  /* keep your gradient */
   background: linear-gradient(to right, #ff416c, #ff4b2b);
   z-index: 3;
 }
@@ -158,6 +159,7 @@ button.ghost:hover{
   right: 0;
   transform: translateX(0);
 }
+
 .container.right-panel-active .overlay-right {
   transform: translateX(20%);
 }
