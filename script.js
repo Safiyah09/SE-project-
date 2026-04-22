@@ -103,3 +103,51 @@ dropdownItems.forEach(item => {
     });
 });
 
+
+
+/* products*/
+// script.js
+
+const search = document.getElementById("search");
+const category = document.getElementById("categoryFilter");
+const lowStock = document.getElementById("lowStock");
+
+function filterProducts() {
+
+let rows = document.querySelectorAll("#productTable tr");
+
+rows.forEach(row => {
+
+let name = row.cells[0].innerText.toLowerCase();
+let cat = row.dataset.category;
+let stock = parseInt(row.dataset.stock);
+
+let searchValue = search.value.toLowerCase();
+let categoryValue = category.value;
+
+let show = true;
+
+// Search filter
+if(!name.includes(searchValue)){
+show = false;
+}
+
+// Category filter
+if(categoryValue !== "all" && cat !== categoryValue){
+show = false;
+}
+
+// Low stock filter
+if(lowStock.checked && stock > 15){
+show = false;
+}
+
+row.style.display = show ? "" : "none";
+
+});
+
+}
+
+search.addEventListener("keyup", filterProducts);
+category.addEventListener("change", filterProducts);
+lowStock.addEventListener("change", filterProducts);
