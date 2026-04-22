@@ -43,7 +43,7 @@ function validate(){
         return;
     }
     alert("successfull login");
-    window.location.href="home.html"
+    window.location.href="product.html"
 
 }
 //validation for signIn
@@ -67,7 +67,7 @@ function valid2(){
         return;
     }
     alert("successfull login");
-    window.location.href="home.html"
+    window.location.href="product.html"
 
 }
 
