@@ -1,0 +1,192 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FreshLedger Products</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<div class="container">
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FreshLedger Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+ <aside class="sidebar">
+    <div class="logo">
+  <div class="logo-icon">
+    <i data-lucide="box"></i>
+  </div>
+  <h2>FreshLedge</h2>
+</div>
+      <ul>
+  <li class="active">
+    <i data-lucide="layout-dashboard"></i>
+    Dashboard
+  </li>
+
+  <li>
+    <i data-lucide="shopping-cart"></i>
+    Point of Sale
+  </li>
+
+  <li>
+    <i data-lucide="box"></i>
+    Products
+  </li>
+
+  <li>
+    <i data-lucide="dollar-sign"></i>
+    Sales
+  </li>
+
+  <li>
+    <i data-lucide="rotate-ccw"></i>
+    Stock Movements
+  </li>
+
+  <li>
+    <i data-lucide="tag"></i>
+    Categories
+  </li>
+
+  <li>
+    <i data-lucide="truck"></i>
+    Suppliers
+  </li>
+</ul>
+    </aside>
+
+    <!-- Main -->
+    <main class="main">
+
+        <div class="top-bar">
+            <div>
+                <h1>Products</h1>
+                <p>Manage your inventory catalog</p>
+            </div>
+
+            <button class="btn">
+                <i class="fa fa-plus"></i> Add Product
+            </button>
+        </div>
+
+        <!-- Filters -->
+        <div class="filters">
+            <input type="text" id="search" placeholder="Search products...">
+
+            <select id="categoryFilter">
+                <option value="all">All Categories</option>
+                <option>Dairy & Eggs</option>
+                <option>Fruits & Vegetables</option>
+                <option>Staples</option>
+                <option>Snacks</option>
+                <option>Bakery</option>
+                <option>Beverages</option>
+            </select>
+
+            <label class="toggle">
+                <input type="checkbox" id="lowStock">
+                Low Stock Only
+            </label>
+        </div>
+
+        <!-- Table -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Product Info</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                    <th>Stock</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+
+            <tbody id="productTable">
+
+                <tr data-category="Dairy & Eggs" data-stock="24">
+                    <td>Amul Butter 100g</td>
+                    <td>Dairy & Eggs</td>
+                    <td>₹55</td>
+                    <td>24 pcs</td>
+                    <td>
+                        <i class="fa fa-pen"></i>
+                        <i class="fa fa-trash"></i>
+                    </td>
+                </tr>
+
+                <tr data-category="Dairy & Eggs" data-stock="34">
+                    <td>Amul Toned Milk 1L</td>
+                    <td>Dairy & Eggs</td>
+                    <td>₹58</td>
+                    <td>34 pcs</td>
+                    <td>
+                        <i class="fa fa-pen"></i>
+                        <i class="fa fa-trash"></i>
+                    </td>
+                </tr>
+
+                <tr data-category="Fruits & Vegetables" data-stock="10">
+                    <td>Apples</td>
+                    <td>Fruits & Vegetables</td>
+                    <td>₹180</td>
+                    <td>10 kg</td>
+                    <td>
+                        <i class="fa fa-pen"></i>
+                        <i class="fa fa-trash"></i>
+                    </td>
+                </tr>
+
+                <tr data-category="Staples" data-stock="14">
+                    <td>Basmati Rice 5kg</td>
+                    <td>Staples</td>
+                    <td>₹650</td>
+                    <td>14 pack</td>
+                    <td>
+                        <i class="fa fa-pen"></i>
+                        <i class="fa fa-trash"></i>
+                    </td>
+                </tr>
+
+                <tr data-category="Bakery" data-stock="10">
+                    <td>Brown Bread</td>
+                    <td>Bakery</td>
+                    <td>₹55</td>
+                    <td>10 pcs</td>
+                    <td>
+                        <i class="fa fa-pen"></i>
+                        <i class="fa fa-trash"></i>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+<script>
+  lucide.createIcons();
+</script>
+</body>
+</html>
